@@ -1,61 +1,20 @@
-var DOCUMENT_ROOT = './';
-var DIRECTORY_INDEX = '/index.html';
+var express = require("express"),
+    app     = express(),
+    port    = parseInt(process.env.PORT, 10) || 4567;
 
-var port = process.env.PORT || 8080;
+app.get("/", function(req, res) {
+    res.redirect("/index.html");
+});
 
-var zlib = require('zlib');
-var http = require('http');
-var path = require('path');
-var fs = require('fs');
+app.configure(function(){
+    app.use(express.methodOverride());
+    app.use(express.bodyParser());
+    app.use(express.static(__dirname));
+    app.use(express.errorHandler({
+        dumpExceptions: true,
+        showStack: true
+    }));
+    app.use(app.router);
+});
 
-http.createServer(function(request, response) {
-
-    // Remove query strings from uri
-    if (request.url.indexOf('?')>-1) {
-        request.url = request.url.substr(0, request.url.indexOf('?'));
-    }
-
-    // Remove query strings from uri
-    if (request.url == '/') {
-        request.url = DIRECTORY_INDEX;
-    }
-    var filePath = DOCUMENT_ROOT + request.url;
-
-    var extname = path.extname(filePath);
-
-    var acceptEncoding = request.headers['accept-encoding'];
-    if (!acceptEncoding) {
-        acceptEncoding = '';
-    }
-
-    path.exists(filePath, function(exists) {
-
-        if (exists) {
-            fs.readFile(filePath, function(error, content) {
-                if (error) {
-                    response.writeHead(500);
-                    response.end();
-                }
-                else {
-                    var raw = fs.createReadStream(filePath);
-
-                    if (acceptEncoding.match(/\bdeflate\b/)) {
-                        response.writeHead(200, { 'content-encoding': 'deflate' });
-                        raw.pipe(zlib.createDeflate()).pipe(response);
-                    } else if (acceptEncoding.match(/\bgzip\b/)) {
-                        response.writeHead(200, { 'content-encoding': 'gzip' });
-                        raw.pipe(zlib.createGzip()).pipe(response);
-                    } else {
-                        response.writeHead(200, {});
-                        raw.pipe(response);
-                    }
-                }
-            });
-        }
-        else {
-            response.writeHead(404);
-            response.end();
-        }
-    });
-
-}).listen(port);
+app.listen(port);
