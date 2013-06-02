@@ -31,6 +31,7 @@
       var w;
 
       w = this.iframe[0].contentWindow;
+      w.TweenMax = window.TweenMax;
       this.map = App.map = w.Map.getInstance();
       this.map.view = this;
       window.google = this.map.google;

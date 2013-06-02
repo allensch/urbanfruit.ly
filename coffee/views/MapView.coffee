@@ -29,6 +29,7 @@ App.Views.MapView = Ember.View.extend(
 
   onIframeLoad: ->
     w = @iframe[0].contentWindow
+    w.TweenMax = window.TweenMax
     @map = App.map = w.Map.getInstance()
     @map.view = @
     window.google = @map.google

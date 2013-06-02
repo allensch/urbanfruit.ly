@@ -9,7 +9,7 @@ window.App = Ember.Application.createWithMixins(Ember.Evented,
   ready: ->
     console.log 'ready'
     @addResizeCallback @resizeMainView, null
-    $(window).resize @onResize.bind @
+    $(window, document).resize @onResize.bind @
     @onResize()
     return
 
@@ -28,10 +28,9 @@ window.App = Ember.Application.createWithMixins(Ember.Evented,
 
   resizeMainView: ->
     wh = $(window).height()
-    th = $('#topNavBar').height()
+    th = $('#topNavBar').height() + $('#searchView').height()
     $('.MainView').height(wh - th)
     return
-
 )
 
 App.map = null

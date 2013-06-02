@@ -5,6 +5,7 @@ App.Controllers.LocationController = Ember.ObjectController.extend(
   location: null
   latitude: null
   longitude: null
+  displayName: null
 
   init: ->
     @_super()
@@ -43,6 +44,7 @@ App.Controllers.LocationController = Ember.ObjectController.extend(
   onReverseLocationResult: (data, status) ->
     if status is google.maps.GeocoderStatus.OK and data.length
       @set 'displayName', App.Utils.LocationUtil.readCityAndStateFromResult(data)
+      console.log @get 'displayName'
     else
       console.error "LocationController:onReverseLocationResult geocoder failed: #{status}"
     return

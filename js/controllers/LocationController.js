@@ -5,6 +5,7 @@
     location: null,
     latitude: null,
     longitude: null,
+    displayName: null,
     init: function() {
       this._super();
       if (Modernizr.geolocation) {
@@ -47,6 +48,7 @@
     onReverseLocationResult: function(data, status) {
       if (status === google.maps.GeocoderStatus.OK && data.length) {
         this.set('displayName', App.Utils.LocationUtil.readCityAndStateFromResult(data));
+        console.log(this.get('displayName'));
       } else {
         console.error("LocationController:onReverseLocationResult geocoder failed: " + status);
       }

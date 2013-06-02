@@ -9,7 +9,7 @@
     ready: function() {
       console.log('ready');
       this.addResizeCallback(this.resizeMainView, null);
-      $(window).resize(this.onResize.bind(this));
+      $(window, document).resize(this.onResize.bind(this));
       this.onResize();
     },
     addResizeCallback: function(callback, scope) {
@@ -31,7 +31,7 @@
       var th, wh;
 
       wh = $(window).height();
-      th = $('#topNavBar').height();
+      th = $('#topNavBar').height() + $('#searchView').height();
       $('.MainView').height(wh - th);
     }
   });
