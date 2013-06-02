@@ -47,19 +47,15 @@
       this.center = new MyLocationMarker(point, this.map, '#CCC');
     };
 
-    Map.prototype.addLocation = function(name, color, point, term) {
+    Map.prototype.addLocation = function(name, color, point, imageUrl) {
       var marker;
 
       marker = new CustomMarker(point, this.map, color);
       google.maps.event.addListener(marker, 'click', (function() {
-        this.showInfo(marker, name);
+        this.showInfo(marker, name, imageUrl);
       }).bind(this));
       this.points.push(point);
       this.markers.push(marker);
-      if (this.terms[term] === void 0) {
-        this.terms[term] = [];
-      }
-      this.terms[term].push(marker);
       clearTimeout(this.timeout);
       this.timeout = setTimeout((function() {
         return this.finalize();
@@ -105,8 +101,8 @@
       }
     };
 
-    Map.prototype.showInfo = function(marker, content) {
-      this.info.setContent("<p>" + content + "</p>");
+    Map.prototype.showInfo = function(marker, content, imageUrl) {
+      this.info.setContent("<img width='50' src='" + imageUrl + "'><p>" + content + "</p>");
       this.info.open(this.map, marker);
     };
 

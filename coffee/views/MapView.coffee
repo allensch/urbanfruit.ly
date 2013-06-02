@@ -7,15 +7,20 @@ App.Views.MapView = Ember.View.extend(
   template: App.Templates.get 'map-view'
   url: "map.html?#{new Date().getTime()}"
 
+  productsLoaded: false
+
   init: ->
     @_super()
     App.on App.Events.MAP_MY_LOCATION, @onSetUserLocation.bind @
+    App.on App.Events.PRODUCTS_LOADED, @onProductsLoaded.bind @
     return
 
   didInsertElement: ->
     @iframe = $ '<iframe src="' + @url + '" class="FillHeight" frameborder="0">'
     @iframe.load @.onIframeLoad.bind @
     @iframe.appendTo @$ '.MapView'
+
+    @onProductsLoaded() if @productsLoaded is false
     return
 
   onAdd: (searchTerm) ->
@@ -29,12 +34,13 @@ App.Views.MapView = Ember.View.extend(
 
   onIframeLoad: ->
     w = @iframe[0].contentWindow
-    w.TweenMax = window.TweenMax
+#    w.TweenMax = window.TweenMax
     @map = App.map = w.Map.getInstance()
     @map.view = @
     window.google = @map.google
     App.trigger App.Events.MAP_READY
     @onSetUserLocation @userLocationPoint if @userLocationPoint
+    @onProductsLoaded() if @productsLoaded is false
     return
 
   onSetUserLocation: (point) ->
@@ -55,7 +61,15 @@ App.Views.MapView = Ember.View.extend(
     store.set App.Store.MAP_ZOOM, value
     return
 
-  registerMarker: (marker) ->
+  onProductsLoaded: ->
+    console.log 'onProductsLoaded called'
+    if App.searchController.get('length') and @map
+      @productsLoaded = true
+      for product in App.searchController.content
+        @map.addLocation product.name, '#FF0000', new google.maps.LatLng(product.location.latitude, product.location.longitude), product.getImageUrl()
+    else
+      console.log 'no products'
+    return
 
 
 )

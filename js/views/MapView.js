@@ -6,14 +6,19 @@
     userLocationPoint: null,
     template: App.Templates.get('map-view'),
     url: "map.html?" + (new Date().getTime()),
+    productsLoaded: false,
     init: function() {
       this._super();
       App.on(App.Events.MAP_MY_LOCATION, this.onSetUserLocation.bind(this));
+      App.on(App.Events.PRODUCTS_LOADED, this.onProductsLoaded.bind(this));
     },
     didInsertElement: function() {
       this.iframe = $('<iframe src="' + this.url + '" class="FillHeight" frameborder="0">');
       this.iframe.load(this.onIframeLoad.bind(this));
       this.iframe.appendTo(this.$('.MapView'));
+      if (this.productsLoaded === false) {
+        this.onProductsLoaded();
+      }
     },
     onAdd: function(searchTerm) {
       var result;
@@ -31,13 +36,15 @@
       var w;
 
       w = this.iframe[0].contentWindow;
-      w.TweenMax = window.TweenMax;
       this.map = App.map = w.Map.getInstance();
       this.map.view = this;
       window.google = this.map.google;
       App.trigger(App.Events.MAP_READY);
       if (this.userLocationPoint) {
         this.onSetUserLocation(this.userLocationPoint);
+      }
+      if (this.productsLoaded === false) {
+        this.onProductsLoaded();
       }
     },
     onSetUserLocation: function(point) {
@@ -58,7 +65,21 @@
     zoomChanged: function(value) {
       store.set(App.Store.MAP_ZOOM, value);
     },
-    registerMarker: function(marker) {}
+    onProductsLoaded: function() {
+      var product, _i, _len, _ref;
+
+      console.log('onProductsLoaded called');
+      if (App.searchController.get('length') && this.map) {
+        this.productsLoaded = true;
+        _ref = App.searchController.content;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          product = _ref[_i];
+          this.map.addLocation(product.name, '#FF0000', new google.maps.LatLng(product.location.latitude, product.location.longitude), product.getImageUrl());
+        }
+      } else {
+        console.log('no products');
+      }
+    }
   });
 
 }).call(this);

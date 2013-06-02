@@ -26,7 +26,6 @@ MyLocationMarker.prototype.draw = function() {
         div.style.borderTopRightRadius = t+'px';
         div.style.borderTopLeftRadius = t+'px';
         div.style.className = 'MyLocationMarker';
-        console.log(div);
         panes.overlayImage.appendChild(div);
     }
 

@@ -6,6 +6,11 @@ window.App = Ember.Application.createWithMixins(Ember.Evented,
 
   guid: -> Math.random().toString(36).substr(2,16)
 
+  init: ->
+    @_super()
+    Parse.initialize("RMZOaEykJSfBsSrUO8Uwqi5Wqj3PUzDG0IK9l5Fl", "IK0S8FDsZJJXRPK3gv4vKQPW0qCiOuBomAaTnxTQ")
+    return
+
   ready: ->
     console.log 'ready'
     @addResizeCallback @resizeMainView, null

@@ -35,17 +35,14 @@ class window.Map
     @center = new MyLocationMarker point, @map, '#CCC'
     return
 
-  addLocation: (name, color, point, term) ->
+  addLocation: (name, color, point, imageUrl) ->
     marker = new CustomMarker point, @map, color
     google.maps.event.addListener marker, 'click', (->
-      @showInfo marker, name
+      @showInfo marker, name, imageUrl
       return).bind @
 
     @points.push point
     @markers.push marker
-
-    @terms[term] = [] if @terms[term] is undefined
-    @terms[term].push marker
 
     clearTimeout @timeout
     @timeout = setTimeout ((->@finalize()).bind @), 100
@@ -69,8 +66,8 @@ class window.Map
     @map.setMapTypeId(google.maps.MapType.ROADMAP) if @map
     return
 
-  showInfo: (marker, content) ->
-    @info.setContent "<p>" + content + "</p>"
+  showInfo: (marker, content, imageUrl) ->
+    @info.setContent "<img width='50' src='#{imageUrl}'><p>#{content}</p>"
     @info.open @map, marker
     return
 

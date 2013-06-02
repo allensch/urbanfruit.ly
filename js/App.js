@@ -6,6 +6,10 @@
     guid: function() {
       return Math.random().toString(36).substr(2, 16);
     },
+    init: function() {
+      this._super();
+      Parse.initialize("RMZOaEykJSfBsSrUO8Uwqi5Wqj3PUzDG0IK9l5Fl", "IK0S8FDsZJJXRPK3gv4vKQPW0qCiOuBomAaTnxTQ");
+    },
     ready: function() {
       console.log('ready');
       this.addResizeCallback(this.resizeMainView, null);
