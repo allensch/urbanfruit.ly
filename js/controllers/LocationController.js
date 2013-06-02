@@ -6,9 +6,11 @@
     latitude: null,
     longitude: null,
     displayName: null,
+    farmersMarketService: null,
     init: function() {
       this._super();
       if (Modernizr.geolocation) {
+        this.farmersMarketService = App.Services.FarmersMarkerService.create();
         navigator.geolocation.getCurrentPosition(this.onGeoLocation.bind(this));
       }
       App.on(App.Events.MAP_READY, this.onMapReady.bind(this));
@@ -48,7 +50,7 @@
     onReverseLocationResult: function(data, status) {
       if (status === google.maps.GeocoderStatus.OK && data.length) {
         this.set('displayName', App.Utils.LocationUtil.readCityAndStateFromResult(data));
-        console.log(this.get('displayName'));
+        this.farmersMarketService.searchByZipCode(App.Utils.LocationUtil.readPostalCodeFromResult(data));
       } else {
         console.error("LocationController:onReverseLocationResult geocoder failed: " + status);
       }

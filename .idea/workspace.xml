@@ -7,16 +7,19 @@
     <file path="$PROJECT_DIR$/../MapLikeThat_Web/maplikethat_web/coffee/views/SearchTermView.coffee" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370123770663" ignored="false" />
     <file path="/SearchTermView.coffee" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370123747052" ignored="false" />
     <file path="$PROJECT_DIR$/../MapLikeThat_Web/maplikethat_web/templates/search-term-view.hbs" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370124469814" ignored="false" />
-    <file path="/index.html" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370193250277" ignored="false" />
+    <file path="/index.html" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370201654536" ignored="false" />
     <file path="/Product.coffee" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370136149501" ignored="false" />
     <file path="/search-for-view.hbs" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370192500065" ignored="false" />
     <file path="/Dummy.txt" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370156367030" ignored="false" />
     <file path="/package.json" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370155385655" ignored="false" />
     <file path="/Procfile" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370155416413" ignored="false" />
-    <file path="/server.js" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370186020756" ignored="false" />
+    <file path="/server.js" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370194007788" ignored="false" />
     <file path="/search.less" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370192430317" ignored="false" />
-    <file path="/LocationController.coffee" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370186697972" ignored="false" />
+    <file path="/LocationController.coffee" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370202375274" ignored="false" />
     <file path="/App.coffee" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370190784603" ignored="false" />
+    <file path="/FarmersMarketService.coffee" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370202595301" ignored="false" />
+    <file path="$PROJECT_DIR$/js/controllers/LocationController.js" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370201979327" ignored="false" />
+    <file path="/LocationUtil.coffee" changelist="9891e8ef-4ea4-4e06-9829-03e40c4a764c" time="1370202258014" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,7 @@
       <file leaf-file-name="LocationUtil.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coffee/utils/LocationUtil.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="31" column="47" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -66,7 +69,7 @@
       <file leaf-file-name="LocationController.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coffee/controllers/LocationController.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="35" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.0">
+            <state line="14" column="46" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,10 +93,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="33" selection-start="459" selection-end="459" vertical-scroll-proportion="0.42666668">
+            <state line="54" column="82" selection-start="1859" selection-end="1859" vertical-scroll-proportion="-8.96">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="15" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FarmersMarketService.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/coffee/services/FarmersMarketService.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="24" selection-start="301" selection-end="301" vertical-scroll-proportion="0.21227197">
               <folding />
             </state>
           </provider>
@@ -103,15 +124,6 @@
         <entry file="file://$PROJECT_DIR$/style/less/search.less">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="52" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coffee/models/Product.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="1" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,21 +145,22 @@
         <option value="$PROJECT_DIR$/coffee/models/Product.coffee" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/coffee/controllers/LocationController.coffee" />
         <option value="$PROJECT_DIR$/coffee/views/MapView.coffee" />
         <option value="$PROJECT_DIR$/coffee/App.coffee" />
         <option value="$PROJECT_DIR$/style/less/search.less" />
         <option value="$PROJECT_DIR$/templates/search-for-view.hbs" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/coffee/utils/LocationUtil.coffee" />
+        <option value="$PROJECT_DIR$/coffee/controllers/LocationController.coffee" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/coffee/services/FarmersMarketService.coffee" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="213" />
-    <option name="y" value="1080" />
+    <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="796" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -203,52 +216,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UrbanFruit.ly_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UrbanFruit.ly_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UrbanFruit.ly_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UrbanFruit.ly_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UrbanFruit.ly_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UrbanFruit.ly_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="coffee" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -267,25 +234,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UrbanFruit.ly_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UrbanFruit.ly_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="coffee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,18 +302,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="213" y="1080" width="1280" height="796" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.67159766" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980111" sideWeight="0.6727829" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -435,18 +384,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/style/css/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/lemontree.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/grunt-ember-handlebars/.npmignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -475,37 +412,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/utils/LocationUtil.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="482" selection-end="482" vertical-scroll-proportion="0.4864">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/controllers/LocationController.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="35" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/coffee/views/MapView.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="6" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/App.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="44" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -538,9 +447,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="15" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/models/Product.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="1" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/App.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="44" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/utils/LocationUtil.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="47" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="459" selection-end="459" vertical-scroll-proportion="0.42666668">
+        <state line="54" column="82" selection-start="1859" selection-end="1859" vertical-scroll-proportion="-8.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/controllers/LocationController.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="46" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/services/FarmersMarketService.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="24" selection-start="301" selection-end="301" vertical-scroll-proportion="0.21227197">
           <folding />
         </state>
       </provider>

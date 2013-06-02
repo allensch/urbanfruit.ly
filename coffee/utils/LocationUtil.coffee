@@ -24,3 +24,11 @@ App.Utils.LocationUtil =
           latitude: location.latitude
           longitude: location.longitude
     return value
+
+  readPostalCodeFromResult: (data) ->
+    for component in data[0].address_components
+      if component.types and component.types.length
+        switch true
+          when 'postal_code' in component.types
+            return component.short_name;
+    return null

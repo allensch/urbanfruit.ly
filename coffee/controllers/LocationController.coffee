@@ -7,9 +7,12 @@ App.Controllers.LocationController = Ember.ObjectController.extend(
   longitude: null
   displayName: null
 
+  farmersMarketService: null
+
   init: ->
     @_super()
     if Modernizr.geolocation
+      @farmersMarketService = App.Services.FarmersMarkerService.create()
       navigator.geolocation.getCurrentPosition @onGeoLocation.bind @
     App.on App.Events.MAP_READY, @onMapReady.bind @
     Ember.run.later @, @onFiveSeconds, 5000
@@ -44,7 +47,7 @@ App.Controllers.LocationController = Ember.ObjectController.extend(
   onReverseLocationResult: (data, status) ->
     if status is google.maps.GeocoderStatus.OK and data.length
       @set 'displayName', App.Utils.LocationUtil.readCityAndStateFromResult(data)
-      console.log @get 'displayName'
+      @farmersMarketService.searchByZipCode App.Utils.LocationUtil.readPostalCodeFromResult(data)
     else
       console.error "LocationController:onReverseLocationResult geocoder failed: #{status}"
     return
