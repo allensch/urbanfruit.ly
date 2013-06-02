@@ -1,0 +1,23 @@
+{
+  "name": "urbanfruit.ly",
+  "version": "0.0.1",
+  "description": "UrbanFruit.ly web application",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfflymolo/Urban-Fruitly.git"
+  },
+  "keywords": [
+    "urbanfruit.ly"
+  ],
+  "author": "Allen Scheinhaus",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-coffee": "latest",
+    "grunt-ember-handlebars": "latest"
+  }
+}

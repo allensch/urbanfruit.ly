@@ -1,0 +1,91 @@
+@iterations: 40;
+
+.SearchTerms {
+  position: relative;
+  li {
+    list-style: none;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transition: all 0.2s ease-in;
+    -webkit-trasition: all 0.2s ease-in;
+
+    .listItemTransitionLoop (@index) when (@index > 0) {
+      .listItemTransition(@index);
+      .listItemTransitionLoop(@index - 1);
+    }
+    .listItemTransitionLoop (0) {}
+    .listItemTransitionLoop (@iterations)
+  }
+}
+
+.listItemTransition (@index) {
+  @percent: @index - 1;
+  &:nth-child (@index) {
+    transform: translate(~"@{percent}%", 0);
+    -webkit-transform: translate(~"@{percent}%", 0);
+  }
+}
+
+.SearchTerm {
+  background-color: #444;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 5px 5px 5px 0px;
+  padding: 5px;
+  float: left;
+  color: #f3f3f3;
+  position: relative;
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .CloseButton {
+    cursor: pointer;
+    width: 14px;
+    padding-top: 2px;
+    display: inline;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+}
+
+.SearchFor {
+
+  input[type="text"] {
+    padding: 14px 6px;
+  }
+
+  .input-append {
+    margin-bottom: 0px;
+  }
+
+  .Searches {
+    margin: 0px;
+  }
+
+  .LocationInput {
+    #myLocation {
+      width: 300px;
+    }
+    display: inline;
+    .btn-group {
+      position: relative;
+      display: inline;
+      right: 46px;
+      top: 2px;
+    }
+  }
+
+  .SearchInput {
+    display: inline;
+  }
+}

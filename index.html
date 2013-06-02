@@ -1,0 +1,71 @@
+<html>
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+    <title>UrbanFruit.ly</title>
+
+    <link href="style/css/bootstrap.css" rel="stylesheet">
+    <link href="style/css/font-awesome.css" rel="stylesheet">
+    <link href="style/css/override.bootstrap.css" rel="stylesheet">
+    <link href="style/css/style.css" rel="stylesheet">
+    <link href="style/css/search.css" rel="stylesheet">
+
+</head>
+<body>
+
+<script type="text/x-handlebars">
+    <div id="topNavBar" class="navbar">
+        <div class="navbar-inner no-border">
+            <div class="navbar-form" style="overflow-y:hidden;">
+                <div class="brand">map<strong>many</strong></div>
+                {{ view App.Views.SearchForView }}
+            </div>
+        </div>
+    </div>
+
+    <div class="MainView">
+        <div class="row-fluid">
+            <!--<div id="leftSide" class="span3 FillHeight" style="padding: 10px;">-->
+            <!--</div>-->
+            <!--<div id="rightSide" class="span9" style="margin-left: 0px;">-->
+                {{ view App.Views.MapView }}
+            <!--</div>-->
+        </div>
+    </div>
+</script>
+
+<!-- Libraries -->
+<script type="text/javascript" src="js/libs/store.js"></script>
+<script type="text/javascript" src="js/libs/modernizr.custom.06579.js"></script>
+<script type="text/javascript" src="js/libs/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery-migrate-1.1.1.min.js"></script>
+<script type="text/javascript" src="js/libs/bootstrap.js"></script>
+<script type="text/javascript" src="js/libs/handlebars.js"></script>
+<script type="text/javascript" src="js/libs/ember-1.0.0-rc.2.js"></script>
+
+<!-- App -->
+<script type="text/javascript" src="js/App.js"></script>
+<script type="text/javascript" src="js/AppConstants.js"></script>
+
+<!-- Utils -->
+<script type="text/javascript" src="js/utils/"></script>
+
+<!-- Models -->
+<script type="text/javascript" src="js/models/"></script>
+
+<!-- Controllers -->
+<script type="text/javascript" src="js/controllers/"></script>
+
+<!-- Templates -->
+<script type="text/javascript" src="js/templates/build.js"></script>
+
+<!-- Views -->
+<script type="text/javascript" src="js/views/"></script>
+
+
+
+</body>
+</html>
+
+

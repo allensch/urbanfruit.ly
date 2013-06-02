@@ -1,0 +1,14 @@
+<div class="SearchFor">
+
+    <div class="input-append">
+        <input id="searchFor" placeholder="Search for..." type="text" class="span3" autocomplete="off">
+        <button class="btn btn-primary" type="button" {{ action doSearch target="view" }}><i class="icon-search icon-white"></i><b>+</b></button>
+    </div>
+
+    <ul class="SearchTerms">
+        {{#each controller}}
+            {{ view App.Views.ProductTileView productBinding="this" }}
+        {{/each}}
+    </ul>
+
+</div>

@@ -1,0 +1,48 @@
+.span3 {
+    width: 25%;
+}
+.span9 {
+    width: 75%;
+}
+
+.navbar {
+    margin-bottom: 0px  ;
+}
+.navbar .container {
+    width: 100%;
+}
+
+.navbar-fixed-top {
+    z-index: 999;
+}
+
+.navbar-form input.search-query {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.nav.pull-right.main {
+    position: absolute;
+    top: 10px;
+    left: inherit;
+    right: 10px;
+    float: right;
+    width: 250px;
+}
+
+.container-fluid.section-view {
+    padding: 0px;
+}
+.container-fluid.section-view .row-fluid .span3 {
+    margin-left: 0px;
+    width: 30%;
+}
+
+.container-fluid.section-view .row-fluid .span9 {
+    margin-left: 0px;
+    width: 70%;
+}
+
+a {
+    cursor: pointer;
+}

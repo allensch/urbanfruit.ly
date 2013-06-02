@@ -1,0 +1,48 @@
+.SearchTerms{position:relative;}.SearchTerms li{list-style:none;position:relative;top:0px;left:0px;transition:all 0.2s ease-in;-webkit-trasition:all 0.2s ease-in;}.SearchTerms li:nth-child (40){transform:translate(39%, 0);-webkit-transform:translate(39%, 0);}
+.SearchTerms li:nth-child (39){transform:translate(38%, 0);-webkit-transform:translate(38%, 0);}
+.SearchTerms li:nth-child (38){transform:translate(37%, 0);-webkit-transform:translate(37%, 0);}
+.SearchTerms li:nth-child (37){transform:translate(36%, 0);-webkit-transform:translate(36%, 0);}
+.SearchTerms li:nth-child (36){transform:translate(35%, 0);-webkit-transform:translate(35%, 0);}
+.SearchTerms li:nth-child (35){transform:translate(34%, 0);-webkit-transform:translate(34%, 0);}
+.SearchTerms li:nth-child (34){transform:translate(33%, 0);-webkit-transform:translate(33%, 0);}
+.SearchTerms li:nth-child (33){transform:translate(32%, 0);-webkit-transform:translate(32%, 0);}
+.SearchTerms li:nth-child (32){transform:translate(31%, 0);-webkit-transform:translate(31%, 0);}
+.SearchTerms li:nth-child (31){transform:translate(30%, 0);-webkit-transform:translate(30%, 0);}
+.SearchTerms li:nth-child (30){transform:translate(29%, 0);-webkit-transform:translate(29%, 0);}
+.SearchTerms li:nth-child (29){transform:translate(28%, 0);-webkit-transform:translate(28%, 0);}
+.SearchTerms li:nth-child (28){transform:translate(27%, 0);-webkit-transform:translate(27%, 0);}
+.SearchTerms li:nth-child (27){transform:translate(26%, 0);-webkit-transform:translate(26%, 0);}
+.SearchTerms li:nth-child (26){transform:translate(25%, 0);-webkit-transform:translate(25%, 0);}
+.SearchTerms li:nth-child (25){transform:translate(24%, 0);-webkit-transform:translate(24%, 0);}
+.SearchTerms li:nth-child (24){transform:translate(23%, 0);-webkit-transform:translate(23%, 0);}
+.SearchTerms li:nth-child (23){transform:translate(22%, 0);-webkit-transform:translate(22%, 0);}
+.SearchTerms li:nth-child (22){transform:translate(21%, 0);-webkit-transform:translate(21%, 0);}
+.SearchTerms li:nth-child (21){transform:translate(20%, 0);-webkit-transform:translate(20%, 0);}
+.SearchTerms li:nth-child (20){transform:translate(19%, 0);-webkit-transform:translate(19%, 0);}
+.SearchTerms li:nth-child (19){transform:translate(18%, 0);-webkit-transform:translate(18%, 0);}
+.SearchTerms li:nth-child (18){transform:translate(17%, 0);-webkit-transform:translate(17%, 0);}
+.SearchTerms li:nth-child (17){transform:translate(16%, 0);-webkit-transform:translate(16%, 0);}
+.SearchTerms li:nth-child (16){transform:translate(15%, 0);-webkit-transform:translate(15%, 0);}
+.SearchTerms li:nth-child (15){transform:translate(14%, 0);-webkit-transform:translate(14%, 0);}
+.SearchTerms li:nth-child (14){transform:translate(13%, 0);-webkit-transform:translate(13%, 0);}
+.SearchTerms li:nth-child (13){transform:translate(12%, 0);-webkit-transform:translate(12%, 0);}
+.SearchTerms li:nth-child (12){transform:translate(11%, 0);-webkit-transform:translate(11%, 0);}
+.SearchTerms li:nth-child (11){transform:translate(10%, 0);-webkit-transform:translate(10%, 0);}
+.SearchTerms li:nth-child (10){transform:translate(9%, 0);-webkit-transform:translate(9%, 0);}
+.SearchTerms li:nth-child (9){transform:translate(8%, 0);-webkit-transform:translate(8%, 0);}
+.SearchTerms li:nth-child (8){transform:translate(7%, 0);-webkit-transform:translate(7%, 0);}
+.SearchTerms li:nth-child (7){transform:translate(6%, 0);-webkit-transform:translate(6%, 0);}
+.SearchTerms li:nth-child (6){transform:translate(5%, 0);-webkit-transform:translate(5%, 0);}
+.SearchTerms li:nth-child (5){transform:translate(4%, 0);-webkit-transform:translate(4%, 0);}
+.SearchTerms li:nth-child (4){transform:translate(3%, 0);-webkit-transform:translate(3%, 0);}
+.SearchTerms li:nth-child (3){transform:translate(2%, 0);-webkit-transform:translate(2%, 0);}
+.SearchTerms li:nth-child (2){transform:translate(1%, 0);-webkit-transform:translate(1%, 0);}
+.SearchTerms li:nth-child (1){transform:translate(0%, 0);-webkit-transform:translate(0%, 0);}
+.SearchTerm{background-color:#444;display:inline-block;border-radius:3px;margin:5px 5px 5px 0px;padding:5px;float:left;color:#f3f3f3;position:relative;}.SearchTerm a{color:#FFF;text-decoration:none;}.SearchTerm a:hover{text-decoration:underline;}
+.SearchTerm .CloseButton{cursor:pointer;width:14px;padding-top:2px;display:inline;}.SearchTerm .CloseButton:hover{color:#FFF;}
+.SearchFor input[type="text"]{padding:14px 6px;}
+.SearchFor .input-append{margin-bottom:0px;}
+.SearchFor .Searches{margin:0px;}
+.SearchFor .LocationInput{display:inline;}.SearchFor .LocationInput #myLocation{width:300px;}
+.SearchFor .LocationInput .btn-group{position:relative;display:inline;right:46px;top:2px;}
+.SearchFor .SearchInput{display:inline;}

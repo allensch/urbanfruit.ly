@@ -1,0 +1,7 @@
+body,html{min-height:100%;height:100%;width:100%;overflow:hidden;}
+.no-border{webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
+.FillHeight{min-height:100%;height:100%;width:100%;}
+.MainView{width:100%;position:relative;}.MainView .span3{width:25%;}
+.MainView .span9{width:75%;}
+.MapView{min-height:100%;height:100%;width:100%;}
+.CustomDivMarker{border:none;position:absolute;padding-left:0px;cursor:pointer;width:10px;height:10px;border-radius:5px;background-color:#000;}
