@@ -95,19 +95,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="121" selection-end="121" vertical-scroll-proportion="0.102073364">
+            <state line="5" column="3" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-32.64">
+            <state line="7" column="44" selection-start="151" selection-end="151" vertical-scroll-proportion="0.18604651">
               <folding />
             </state>
           </provider>
@@ -140,10 +140,10 @@
         <option value="$PROJECT_DIR$/coffee/App.coffee" />
         <option value="$PROJECT_DIR$/coffee/models/Product.coffee" />
         <option value="$PROJECT_DIR$/templates/search-for-view.hbs" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -408,13 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-32.64">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="24" selection-start="445" selection-end="445" vertical-scroll-proportion="-11.52">
@@ -431,7 +424,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="121" selection-end="121" vertical-scroll-proportion="0.102073364">
+        <state line="5" column="3" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="44" selection-start="151" selection-end="151" vertical-scroll-proportion="0.18604651">
           <folding />
         </state>
       </provider>
