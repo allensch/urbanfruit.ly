@@ -1,8 +1,6 @@
 <html>
 <head>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
-
     <title>UrbanFruit.ly</title>
 
     <link rel="icon" type="image/ico" href="favicon.ico"/>
@@ -17,24 +15,27 @@
 <body>
 
 <script type="text/x-handlebars">
+
     <div id="topNavBar" class="navbar">
         <div class="navbar-inner no-border">
-            <div class="navbar-form" style="overflow-y:hidden;">
+            <div class="navbar-form">
                 <div class="brand">urban<strong>fruit.ly</strong></div>
-                {{ view App.Views.SearchForView }}
+                <ul class="nav pull-right">
+                    <li class="divider-vertical"></li>
+                    <li>
+                        <button class="btn btn-danger">Login</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 
+    {{ view App.Views.SearchForView id="searchView" }}
+
     <div class="MainView">
-        <div class="row-fluid">
-            <!--<div id="leftSide" class="span3 FillHeight" style="padding: 10px;">-->
-            <!--</div>-->
-            <!--<div id="rightSide" class="span9" style="margin-left: 0px;">-->
-                {{ view App.Views.MapView }}
-            <!--</div>-->
-        </div>
+        {{ view App.Views.MapView }}
     </div>
+
 </script>
 
 <!-- Libraries -->
@@ -45,17 +46,24 @@
 <script type="text/javascript" src="js/libs/bootstrap.js"></script>
 <script type="text/javascript" src="js/libs/handlebars.js"></script>
 <script type="text/javascript" src="js/libs/ember-1.0.0-rc.2.js"></script>
+<script type="text/javascript" src="js/libs/parse-1.2.7.min.js"></script>
 
 <!-- App -->
 <script type="text/javascript" src="js/App.js"></script>
 <script type="text/javascript" src="js/AppConstants.js"></script>
 
+<!-- Services -->
+<script type="text/javascript" src="js/services/FarmersMarketService.js"></script>
+<script type="text/javascript" src="js/services/ProductsListingService.js"></script>
+
 <!-- Utils -->
 <!--<script type="text/javascript" src="js/utils/"></script>-->
+<script type="text/javascript" src="js/utils/LocationUtil.js"></script>
 
 <!-- Models -->
 <!--<script type="text/javascript" src="js/models/"></script>-->
-<script type="text/javascript" src="js/models/Product.js"></script>
+<script type="text/javascript" src="js/models/ProductModel.js"></script>
+<script type="text/javascript" src="js/models/FarmersMarketModel.js"></script>
 
 <!-- Controllers -->
 <!--<script type="text/javascript" src="js/controllers/"></script>-->
@@ -69,8 +77,6 @@
 <!--<script type="text/javascript" src="js/views/"></script>-->
 <script type="text/javascript" src="js/views/MapView.js"></script>
 <script type="text/javascript" src="js/views/SearchForView.js"></script>
-
-
 
 </body>
 </html>

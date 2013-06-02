@@ -1,91 +1,35 @@
-@iterations: 40;
-
-.SearchTerms {
-  position: relative;
-  li {
-    list-style: none;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    transition: all 0.2s ease-in;
-    -webkit-trasition: all 0.2s ease-in;
-
-    .listItemTransitionLoop (@index) when (@index > 0) {
-      .listItemTransition(@index);
-      .listItemTransitionLoop(@index - 1);
-    }
-    .listItemTransitionLoop (0) {}
-    .listItemTransitionLoop (@iterations)
-  }
-}
-
-.listItemTransition (@index) {
-  @percent: @index - 1;
-  &:nth-child (@index) {
-    transform: translate(~"@{percent}%", 0);
-    -webkit-transform: translate(~"@{percent}%", 0);
-  }
-}
-
-.SearchTerm {
-  background-color: #444;
-  display: inline-block;
-  border-radius: 3px;
-  margin: 5px 5px 5px 0px;
-  padding: 5px;
-  float: left;
-  color: #f3f3f3;
-  position: relative;
-
-  a {
-    color: #FFF;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .CloseButton {
-    cursor: pointer;
-    width: 14px;
-    padding-top: 2px;
-    display: inline;
-
-    &:hover {
-      color: #FFF;
-    }
-  }
-
-}
 
 .SearchFor {
 
-  input[type="text"] {
-    padding: 14px 6px;
-  }
+  background-image: url('../../img/lemontree.jpg');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: 100%;
+  height: 200px;
 
-  .input-append {
-    margin-bottom: 0px;
-  }
+  .SearchInputArea {
 
-  .Searches {
-    margin: 0px;
-  }
+    .SearchInputHeader {
+      color: #EEE;
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-shadow: #000 0 0 7px,#000 0 2px 0,rgba(0,0,0,0.9) 0 0 9px;
+    }
 
-  .LocationInput {
-    #myLocation {
+    input[type="text"] {
+      padding: 14px 6px;
       width: 300px;
     }
-    display: inline;
-    .btn-group {
-      position: relative;
-      display: inline;
-      right: 46px;
-      top: 2px;
+
+    .input-append {
+      margin-bottom: 0px;
     }
+
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    width: 400px;
   }
 
-  .SearchInput {
-    display: inline;
-  }
 }

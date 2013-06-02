@@ -19,6 +19,6 @@
     "express": "latest",
     "grunt": "latest",
     "grunt-contrib-coffee": "latest",
-    "grunt-ember-handlebars": "latest"
+    "grunt-ember-handlebars": "0.4.0"
   }
 }

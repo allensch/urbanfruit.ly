@@ -5,9 +5,13 @@
     location: null,
     latitude: null,
     longitude: null,
+    displayName: null,
+    farmersMarketService: null,
     init: function() {
       this._super();
       if (Modernizr.geolocation) {
+        this.farmersMarketService = App.Services.FarmersMarkerService.create();
+        this.farmersMarketService.fetch();
         navigator.geolocation.getCurrentPosition(this.onGeoLocation.bind(this));
       }
       App.on(App.Events.MAP_READY, this.onMapReady.bind(this));

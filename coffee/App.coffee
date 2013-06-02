@@ -6,10 +6,15 @@ window.App = Ember.Application.createWithMixins(Ember.Evented,
 
   guid: -> Math.random().toString(36).substr(2,16)
 
+  init: ->
+    @_super()
+    Parse.initialize("RMZOaEykJSfBsSrUO8Uwqi5Wqj3PUzDG0IK9l5Fl", "IK0S8FDsZJJXRPK3gv4vKQPW0qCiOuBomAaTnxTQ")
+    return
+
   ready: ->
     console.log 'ready'
     @addResizeCallback @resizeMainView, null
-    $(window).resize @onResize.bind @
+    $(window, document).resize @onResize.bind @
     @onResize()
     return
 
@@ -28,10 +33,9 @@ window.App = Ember.Application.createWithMixins(Ember.Evented,
 
   resizeMainView: ->
     wh = $(window).height()
-    th = $('#topNavBar').height()
+    th = $('#topNavBar').height() + $('#searchView').height()
     $('.MainView').height(wh - th)
     return
-
 )
 
 App.map = null

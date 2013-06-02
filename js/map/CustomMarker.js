@@ -7,7 +7,7 @@ function CustomMarker(latlng, map, color) {
 CustomMarker.prototype = new google.maps.OverlayView();
 
 CustomMarker.prototype.draw = function() {
-    var t = 14 * 2;
+    var t = 6 * 2;
     var me = this;
     var div = this.div_;
     var panes = this.getPanes();
@@ -23,17 +23,6 @@ CustomMarker.prototype.draw = function() {
         div.style.height = t+'px';
         div.style.backgroundColor = this.color;
         div.style.borderRadius = t/2+'px';
-
-        TweenMax.to(div, .1, {scale:.5, delay:CustomMarker.delayIncrement(), onComplete:CustomMarker.delayTimeoutClear});
-
-        div.onmouseover = function() {
-            div.style.zIndex = div.style.zIndex += 1;
-            TweenMax.to(div, .1, {scale:1, borderRadius:'10px, 12x, 10px, 0px' });
-        }
-        div.onmouseout = function() {
-            div.style = null;
-            TweenMax.to(div, .1, {scale:.5});
-        }
 
         google.maps.event.addDomListener(div, "click", function(event) {
             google.maps.event.trigger(me, "click");

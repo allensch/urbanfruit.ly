@@ -5,10 +5,15 @@ App.Controllers.LocationController = Ember.ObjectController.extend(
   location: null
   latitude: null
   longitude: null
+  displayName: null
+
+  farmersMarketService: null
 
   init: ->
     @_super()
     if Modernizr.geolocation
+      @farmersMarketService = App.Services.FarmersMarkerService.create()
+      @farmersMarketService.fetch()
       navigator.geolocation.getCurrentPosition @onGeoLocation.bind @
     App.on App.Events.MAP_READY, @onMapReady.bind @
     Ember.run.later @, @onFiveSeconds, 5000

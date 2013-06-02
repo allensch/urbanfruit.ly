@@ -43,6 +43,21 @@
         }
       }
       return value;
+    },
+    readPostalCodeFromResult: function(data) {
+      var component, _i, _len, _ref;
+
+      _ref = data[0].address_components;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        component = _ref[_i];
+        if (component.types && component.types.length) {
+          switch (true) {
+            case __indexOf.call(component.types, 'postal_code') >= 0:
+              return component.short_name;
+          }
+        }
+      }
+      return null;
     }
   };
 
