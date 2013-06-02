@@ -99,7 +99,8 @@
     };
 
     Map.prototype.showInfo = function(marker, content, imageUrl) {
-      this.info.setContent("<img width='50' src='" + imageUrl + "'><p>" + content + "</p>");
+      this.info.setContent("<div id=\"google-info-window\" style=\"width:900px;height:900px;\">" + ("<img src='" + imageUrl + "' style=\"width:140px;\">") + ("<p>" + content + "</p>") + "</div>");
+      this.info.set;
       this.info.open(this.map, marker);
     };
 
