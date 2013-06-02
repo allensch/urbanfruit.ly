@@ -66,8 +66,14 @@ class window.Map
     return
 
   showInfo: (marker, content, imageUrl) ->
-    @info.setContent "<img width='50' src='#{imageUrl}'><p>#{content}</p>"
+
+    @info.setContent "<div id=\"google-info-window\" style=\"width:900px;height:900px;\">" +
+    "<img src='#{imageUrl}' style=\"width:140px;\">" +
+    "<p>#{content}</p>" +
+    "</div>"
+    @info.set
     @info.open @map, marker
+
     return
 
   finalize: ->
