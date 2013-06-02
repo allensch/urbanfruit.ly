@@ -11,6 +11,7 @@
       this._super();
       App.on(App.Events.MAP_MY_LOCATION, this.onSetUserLocation.bind(this));
       App.on(App.Events.PRODUCTS_LOADED, this.onProductsLoaded.bind(this));
+      App.on(App.Events.PRODUCTS_FILTERED, this.onProductsFiltered.bind(this));
     },
     didInsertElement: function() {
       this.iframe = $('<iframe src="' + this.url + '" class="FillHeight" frameborder="0">');
@@ -78,6 +79,17 @@
         }
       } else {
         console.log('no products');
+      }
+    },
+    onProductsFiltered: function(results) {
+      var product, _i, _len;
+
+      if (this.map && results.length) {
+        this.map.clear();
+        for (_i = 0, _len = results.length; _i < _len; _i++) {
+          product = results[_i];
+          this.map.addLocation(product.name, '#FF0000', new google.maps.LatLng(product.location.latitude, product.location.longitude), product.getImageUrl());
+        }
       }
     }
   });

@@ -96,9 +96,6 @@
       if (this.info) {
         this.info.close();
       }
-      if (this.map) {
-        this.map.setMapTypeId(google.maps.MapType.ROADMAP);
-      }
     };
 
     Map.prototype.showInfo = function(marker, content, imageUrl) {
