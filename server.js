@@ -1,6 +1,8 @@
-var express = require('express'),
-    app = express.createServer();
+var express = require('express');
+var app = express();
+var path = require('path');
 
-app.get('/', function(req, res){
-    res.redirect("/index.html");
-});
+app.use(express.static(__dirname));
+
+app.listen(80);
+console.log('Listening on port 80');
