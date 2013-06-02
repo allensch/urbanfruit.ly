@@ -17,4 +17,4 @@ app.configure(function(){
     app.use(app.router);
 });
 
-app.listen(9000, '127.0.0.1');
+app.listen(port);
