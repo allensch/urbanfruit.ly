@@ -16,6 +16,7 @@
   "author": "Allen Scheinhaus",
   "license": "BSD",
   "devDependencies": {
+    "express": "latest",
     "grunt": "latest",
     "grunt-contrib-coffee": "latest",
     "grunt-ember-handlebars": "latest"
