@@ -1,6 +1,7 @@
 (function() {
   App.Models.ProducModel = Ember.Object.extend({
-    name: null
+    name: null,
+    dsfdsfdsf: 'sdfdsfds'
   });
 
 }).call(this);
