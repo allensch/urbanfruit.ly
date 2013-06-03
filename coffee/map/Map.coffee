@@ -63,7 +63,6 @@ class window.Map
     @points.splice 0, 1 while @points.length > 1
     @markers.splice 0, 1 while @markers.length > 1
     @info.close() if @info
-    @map.setMapTypeId(google.maps.MapType.ROADMAP) if @map
     return
 
   showInfo: (marker, content, imageUrl) ->

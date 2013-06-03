@@ -1,6 +1,7 @@
 App.Controllers.SearchController = Ember.ArrayController.extend(
 
   content: []
+  result: null
   productSearchService: null
 
   init: ->
@@ -15,6 +16,20 @@ App.Controllers.SearchController = Ember.ArrayController.extend(
     if @get 'length'
       App.trigger App.Events.PRODUCTS_LOADED
       console.log 'products loaded in search controller'
+    return
+
+  autoCompleteSearchAssist: (query, process) ->
+    result = []
+    @result = []
+    for product in @content
+      if product.isMatch(query)
+        result.push product.name
+        @result.push product
+    process result
+    return
+
+  doSearch: () ->
+    App.trigger App.Events.PRODUCTS_FILTERED, @result
     return
 )
 

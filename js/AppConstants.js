@@ -5,6 +5,8 @@
 
   App.Events.PRODUCTS_LOADED = 'products-loaded';
 
+  App.Events.PRODUCTS_FILTERED = 'products-filtered';
+
   App.Store.MAP_ZOOM = 'map_zoom';
 
   App.Store.LAST_LOCATION = 'last_location';

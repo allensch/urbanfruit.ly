@@ -4,7 +4,8 @@
   "description": "UrbanFruit.ly web application",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,15 @@
     "grunt": "latest",
     "grunt-contrib-coffee": "latest",
     "grunt-ember-handlebars": "0.4.0"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "c7ca4c8e989a4cc1053a58644f0c8b7fcd018201",
+  "bugs": {
+    "url": "https://github.com/cfflymolo/Urban-Fruitly/issues"
+  },
+  "dependencies": {
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-ember-handlebars": "~0.4.0",
+    "express": "~3.2.5"
   }
 }

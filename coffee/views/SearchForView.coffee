@@ -7,6 +7,11 @@ App.Views.SearchForView = Ember.View.extend(
   didInsertElement: ->
     $(@inputId, @$()).focus()
     $(@inputId, @$()).keypress @onKeyPress.bind @
+    $(@inputId).typeahead(
+      source: @controller.autoCompleteSearchAssist.bind @controller
+      updater: @controller.doSearch.bind @controller
+      minLength: 1
+    )
     return
 
   onKeyPress: (e) ->

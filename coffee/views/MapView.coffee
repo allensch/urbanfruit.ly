@@ -13,6 +13,7 @@ App.Views.MapView = Ember.View.extend(
     @_super()
     App.on App.Events.MAP_MY_LOCATION, @onSetUserLocation.bind @
     App.on App.Events.PRODUCTS_LOADED, @onProductsLoaded.bind @
+    App.on App.Events.PRODUCTS_FILTERED, @onProductsFiltered.bind @
     return
 
   didInsertElement: ->
@@ -69,6 +70,13 @@ App.Views.MapView = Ember.View.extend(
         @map.addLocation product.name, '#FF0000', new google.maps.LatLng(product.location.latitude, product.location.longitude), product.getImageUrl()
     else
       console.log 'no products'
+    return
+
+  onProductsFiltered: (results) ->
+    if @map and results.length
+      @map.clear()
+      for product in results
+        @map.addLocation product.name, '#FF0000', new google.maps.LatLng(product.location.latitude, product.location.longitude), product.getImageUrl()
     return
 
 

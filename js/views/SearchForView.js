@@ -6,6 +6,11 @@
     didInsertElement: function() {
       $(this.inputId, this.$()).focus();
       $(this.inputId, this.$()).keypress(this.onKeyPress.bind(this));
+      $(this.inputId).typeahead({
+        source: this.controller.autoCompleteSearchAssist.bind(this.controller),
+        updater: this.controller.doSearch.bind(this.controller),
+        minLength: 1
+      });
     },
     onKeyPress: function(e) {
       if (e.hasOwnProperty('keyCode')) {
