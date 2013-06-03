@@ -67,6 +67,8 @@ App.Views.MapView = Ember.View.extend(
     if App.searchController.get('length') and @map
       @productsLoaded = true
       for product in App.searchController.content
+        #TODO: Fetch user data associated with this product listing.
+
         @map.addLocation product.name, '#FF0000', new google.maps.LatLng(product.location.latitude, product.location.longitude), product.getImageUrl()
     else
       console.log 'no products'
