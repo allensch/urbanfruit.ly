@@ -15,9 +15,15 @@
 <body>
 
 <script type="text/x-handlebars">
-
+    <!-- Floating div that'll be used for notifications overlay -->
     {{render navbar}}
+    <!-- Notification container for displaying flash messages -->
+    <div id="notifications-overlay-container" class="container">
+        {{render notifications}}
+    </div>
     {{outlet}}
+
+
 
 </script>
 
