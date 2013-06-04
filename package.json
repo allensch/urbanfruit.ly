@@ -20,7 +20,7 @@
     "express": "latest",
     "grunt": "latest",
     "grunt-contrib-coffee": "latest",
-    "grunt-ember-handlebars": "0.4.0"
+    "grunt-ember-handlebars": "0.6.0"
   },
   "readmeFilename": "README.md",
   "gitHead": "c7ca4c8e989a4cc1053a58644f0c8b7fcd018201",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "grunt-contrib-coffee": "~0.7.0",
-    "grunt-ember-handlebars": "~0.4.0",
+    "grunt-ember-handlebars": "~0.6.0",
     "express": "~3.2.5"
   }
 }
