@@ -42,6 +42,16 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   
 });
 
+this["App"]["Templates"]["navbar"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [3,'>= 1.0.0-rc.4'];
+helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  
+
+
+  data.buffer.push("<!--/**\n    Navbar view handlebars template file.\n */-->\n\n<div id=\"topNavBar\" class=\"navbar\">\n    <div class=\"navbar-inner no-border\">\n        <div class=\"navbar-form\">\n            <div style=\"float: left;\">\n                <img src=\"img/logosmall.png\">\n            </div>\n            <div class=\"brand\">urban<strong>fruit.ly</strong></div>\n            <ul class=\"nav pull-right\">\n                <li class=\"divider-vertical\"></li>\n                <li>\n                    <button class=\"btn btn-danger\">Login</button>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>");
+  
+});
+
 this["App"]["Templates"]["register"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [3,'>= 1.0.0-rc.4'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
