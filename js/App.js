@@ -8,7 +8,7 @@
     },
     init: function() {
       this._super();
-      Parse.initialize(window._APP_SECRETS.PARSE_API_JAVASCRIPT_KEY, window._APP_SECRETS.PARSE_API_JAVASCRIPT_KEY);
+      Parse.initialize(window._APP_SECRETS.PARSE_APP_ID, window._APP_SECRETS.PARSE_API_JAVASCRIPT_KEY);
     },
     ready: function() {
       console.log('ready');

@@ -8,7 +8,8 @@ window.App = Ember.Application.createWithMixins(Ember.Evented,
 
   init: ->
     @_super()
-    Parse.initialize(window._APP_SECRETS.PARSE_API_JAVASCRIPT_KEY, window._APP_SECRETS.PARSE_API_JAVASCRIPT_KEY)
+    # Initialize Parse API for backend persistence.
+    Parse.initialize(window._APP_SECRETS.PARSE_APP_ID, window._APP_SECRETS.PARSE_API_JAVASCRIPT_KEY)
     return
 
   ready: ->
