@@ -13,12 +13,22 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.Views.SearchForView", {hash:{
     'id': ("searchView")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n\n<div class=\"MainView\">\n    ");
+  data.buffer.push("\n<div class=\"MainView\">\n    ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.Views.MapView", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n</div>");
+  data.buffer.push("\n</div>\n");
   return buffer;
+  
+});
+
+this["App"]["Templates"]["login"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [3,'>= 1.0.0-rc.4'];
+helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  
+
+
+  data.buffer.push("Place Holder\n\n<a class=\"btn btn-primary\">Login with Facebook</a>");
   
 });
 
@@ -32,23 +42,13 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   
 });
 
-this["App"]["Templates"]["navbar-view"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [3,'>= 1.0.0-rc.4'];
-helpers = helpers || Ember.Handlebars.helpers; data = data || {};
-  
-
-
-  data.buffer.push("placeholder navbar view");
-  
-});
-
 this["App"]["Templates"]["register"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [3,'>= 1.0.0-rc.4'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   
 
 
-  data.buffer.push("TESTING REGISTER handle bars");
+  data.buffer.push("REGISTRATION PAGE PLACEHOLER");
   
 });
 
