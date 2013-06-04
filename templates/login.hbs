@@ -1,3 +1,30 @@
-Place Holder
 
-<a class="btn btn-primary">Login with Facebook</a>
+
+<div class="container">
+
+    {{#if loggedIn}}
+        {{button doLogout}}
+    {{else}}
+
+        <!-- Place Holder for social media login -->
+        <div class="well-small">
+            Login using a social network:<br/>
+            <a class="btn"><img src="img/FB-f-Logo__blue_50.png"/> Facebook</a>
+        </div>
+
+
+        <!-- Simple Login -->
+        <div class="well-small">
+            <form {{action doLogin}}>
+                {{input value=username type="text" placeholder="Username"}}<br/>
+                {{input value=password type="password" placeholder="Password"}}<br/>
+                {{input class="btn" type="submit" value="Log In"}}
+            </form>
+        </div>
+
+
+
+
+    {{/if}}
+
+</div>
