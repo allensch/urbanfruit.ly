@@ -6,8 +6,14 @@
     this.route("register", {
       path: "/register"
     });
-    return this.route("login", {
+    this.route("login", {
       path: "/login"
+    });
+    this.route("profile", {
+      path: "/profile"
+    });
+    return this.route("profileCreate", {
+      path: "/profile/create"
     });
   });
 

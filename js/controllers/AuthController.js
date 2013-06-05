@@ -27,6 +27,7 @@
     handleLogout: function() {
       Parse.User.logOut();
       this.incrementProperty('userChange');
+      this.transitionToRoute('index');
     }
   });
 

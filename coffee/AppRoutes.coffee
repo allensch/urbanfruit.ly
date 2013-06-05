@@ -9,3 +9,8 @@ App.Router.map ->
   @route "login",
     path: "/login"
 
+  @route "profile",
+    path: "/profile"
+
+  @route "profileCreate",
+    path: "/profile/create"

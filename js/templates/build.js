@@ -176,6 +176,46 @@ function program6(depth0,data) {
   
 });
 
+this["App"]["Templates"]["profile-create"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [3,'>= 1.0.0-rc.4'];
+helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  var buffer = '', stack1, hashContexts, hashTypes, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("\n\n<div class=\"container create-profile-form-container\">\n    <form class=\"form-inline\">\n\n        <div class=\"row pagination-centered\">\n\n            <!-- Profile Pic preview/upload -->\n            <div class=\"span4\">\n                <p class=\"span2 offset1\">\n                    <label class=\"visible-desktop\">Drag and drop Image to upload a profile pic.</label>\n                </p>\n\n                <p class=\"span4\">\n                    <img class=\"img-polaroid\" src=\"img/profile_img_placeholder.png\"/>\n                </p>\n\n                <p class=\"span2 offset1\">\n                    <input type=\"file\"/>\n                </p>\n            </div>\n\n            <!-- Right column -->\n            <div class=\"span6\">\n\n                <p>\n                    <label>Name:</label>");
+  hashContexts = {'type': depth0};
+  hashTypes = {'type': "STRING"};
+  options = {hash:{
+    'type': ("text")
+  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers.input),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n                </p>\n                <p>\n                    <label>Email:</label>");
+  hashContexts = {'type': depth0};
+  hashTypes = {'type': "STRING"};
+  options = {hash:{
+    'type': ("email")
+  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers.input),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n                </p>\n                <p>\n                    ");
+  hashContexts = {'placeholder': depth0};
+  hashTypes = {'placeholder': "STRING"};
+  options = {hash:{
+    'placeholder': ("Write a short bio of yourself.")
+  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers.textarea),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("\n                </p>\n\n                <p>\n                    ");
+  hashContexts = {'type': depth0,'class': depth0};
+  hashTypes = {'type': "STRING",'class': "STRING"};
+  options = {hash:{
+    'type': ("submit"),
+    'class': ("btn btn-primary")
+  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers.input),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n                </p>\n\n\n            </div>\n        </div>\n\n\n\n    </form>\n</div>\n\n");
+  return buffer;
+  
+});
+
 this["App"]["Templates"]["register"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [3,'>= 1.0.0-rc.4'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};

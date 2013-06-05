@@ -1,0 +1,48 @@
+
+
+<div class="container create-profile-form-container">
+    <form class="form-inline">
+
+        <div class="row pagination-centered">
+
+            <!-- Profile Pic preview/upload -->
+            <div class="span4">
+                <p class="span2 offset1">
+                    <label class="visible-desktop">Drag and drop Image to upload a profile pic.</label>
+                </p>
+
+                <p class="span4">
+                    <img class="img-polaroid" src="img/profile_img_placeholder.png"/>
+                </p>
+
+                <p class="span2 offset1">
+                    <input type="file"/>
+                </p>
+            </div>
+
+            <!-- Right column -->
+            <div class="span6">
+
+                <p>
+                    <label>Name:</label>{{input type="text"}}
+                </p>
+                <p>
+                    <label>Email:</label>{{input type="email"}}
+                </p>
+                <p>
+                    {{textarea placeholder="Write a short bio of yourself."}}
+                </p>
+
+                <p>
+                    {{input type="submit" class="btn btn-primary"}}
+                </p>
+
+
+            </div>
+        </div>
+
+
+
+    </form>
+</div>
+

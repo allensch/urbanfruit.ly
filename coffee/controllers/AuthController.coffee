@@ -34,5 +34,6 @@ App.AuthController = Ember.Controller.extend(
     Parse.User.logOut()
     # signal user change
     @incrementProperty 'userChange'
+    @transitionToRoute 'index'
     return
 )

@@ -18,7 +18,7 @@
     <!-- Floating div that'll be used for notifications overlay -->
     {{render navbar}}
     <!-- Notification container for displaying flash messages -->
-    <div id="notifications-overlay-container" class="container">
+    <div id="notifications-overlay-container" class="container hide">
         {{render notifications}}
     </div>
     {{outlet}}
@@ -50,6 +50,8 @@ Then insert your Parse.com API keys. -->
 <!-- Routes -->
 <script type="text/javascript" src="js/AppRoutes.js"></script>
 <script type="text/javascript" src="/js/routes/LoginRoute.js"></script>
+<script type="text/javascript" src="/js/routes/ProfileRoute.js"></script>
+<script type="text/javascript" src="/js/routes/ProfileCreateRoute.js"></script>
 
 <!-- Services -->
 <script type="text/javascript" src="js/services/FarmersMarketService.js"></script>
@@ -81,6 +83,7 @@ Then insert your Parse.com API keys. -->
 <script type="text/javascript" src="js/views/LoginView.js"></script>
 <script type="text/javascript" src="js/views/MapView.js"></script>
 <script type="text/javascript" src="/js/views/NavbarView.js"></script>
+<script type="text/javascript" src="/js/views/ProfileCreateView.js"></script>
 <script type="text/javascript" src="js/views/RegisterView.js"></script>
 <script type="text/javascript" src="js/views/SearchForView.js"></script>
 
