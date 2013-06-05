@@ -6,10 +6,8 @@
 
       currentUser = Parse.User.current();
       if (currentUser) {
-        console.log("auth.user current logged in user: " + currentUser.username);
         return currentUser;
       }
-      console.log("not logged in");
       return false;
     }).property('userChange'),
     handleLogin: function(username, password, successFunc, errorFunc) {
@@ -27,7 +25,6 @@
       });
     },
     handleLogout: function() {
-      console.log("logging out");
       Parse.User.logOut();
       this.incrementProperty('userChange');
     }

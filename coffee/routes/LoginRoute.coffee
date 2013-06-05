@@ -1,5 +1,5 @@
 App.LoginRoute = Ember.Route.extend(setupController: (controller, context) ->
-    console.log "Setting up login route."
+    # Reset any error messages and previous data.
     controller.reset()
     return
 )
