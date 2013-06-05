@@ -2,9 +2,18 @@
 
 <div class="container">
 
-    {{#if loggedIn}}
-        {{button doLogout}}
+    {{#if isLoggedIn}}
+        <p>
+            <div class="well">
+                <h1>You are already logged in.</h1>
+                <button class="btn" {{action logout}}>Logout</button>
+            </div>
+        </p>
+
     {{else}}
+        {{#if errorMessage}}
+            <div class="alert alert-error">{{errorMessage}}</div>
+        {{/if}}
 
         <!-- Place Holder for social media login -->
         <div class="well-small">
@@ -15,14 +24,12 @@
 
         <!-- Simple Login -->
         <div class="well-small">
-            <form {{action doLogin}}>
+            <form {{action login on="submit"}}>
                 {{input value=username type="text" placeholder="Username"}}<br/>
                 {{input value=password type="password" placeholder="Password"}}<br/>
                 {{input class="btn" type="submit" value="Log In"}}
             </form>
         </div>
-
-
 
 
     {{/if}}

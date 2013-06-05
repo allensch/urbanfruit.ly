@@ -1,9 +1,8 @@
 (function() {
-  App.PostRoute = App.Route.extend({
-    renderTemplate: function() {
-      return this.render("login", {
-        into: "application"
-      });
+  App.LoginRoute = Ember.Route.extend({
+    setupController: function(controller, context) {
+      console.log("Setting up login route.");
+      controller.reset();
     }
   });
 

@@ -14,7 +14,13 @@
             <ul class="nav pull-right">
                 <li class="divider-vertical"></li>
                 <li>
-                    {{#linkTo login tag="button" class="btn btn-danger"}}Login{{/linkTo}}
+                    {{log isLoggedIn}}
+                    {{#if isLoggedIn}}
+                        <button {{action logout}} class="btn">Logout</button>
+                    {{else}}
+                        {{#linkTo login tag="button" class="btn btn-danger"}}Login{{/linkTo}}
+                    {{/if}}
+
                 </li>
             </ul>
         </div>
