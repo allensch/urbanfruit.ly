@@ -189,13 +189,15 @@ function program6(depth0,data) {
 this["App"]["Templates"]["profile-create"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [3,'>= 1.0.0-rc.4'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
-  var buffer = '', stack1, hashTypes, hashContexts, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
+  var buffer = '', stack1, hashContexts, hashTypes, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
 
   data.buffer.push("\n\n<div id=\"profile-div\" class=\"container-fluid\">\n\n        <div class=\"row\">\n\n            <div class=\"span2 offset2\">\n                <span>Profile Picture</span><br/>\n                ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.DndImageUploadView", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  hashContexts = {'valueBinding': depth0};
+  hashTypes = {'valueBinding': "ID"};
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.DndImageUploadView", {hash:{
+    'valueBinding': ("profilePic")
+  },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("<br/>\n                ");
   hashContexts = {'type': depth0};
   hashTypes = {'type': "STRING"};
@@ -203,7 +205,7 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
     'type': ("file")
   },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers.input),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n            </div>\n\n            <!-- Right column -->\n            <div class=\"span6 offset2\">\n\n                <p>\n                    <label for=\"profile-bio\">About:</label>\n                    ");
+  data.buffer.push("<br/>\n                <div id=\"file-upload-progress\" class=\"progress\">\n                    <div class=\"bar\" style=\"width: 60%;\"></div>\n                </div>\n            </div>\n\n\n\n            <!-- Right column -->\n            <div class=\"span6 offset2\">\n\n                <p>\n                    <label for=\"profile-bio\">About:</label>\n                    ");
   hashContexts = {'id': depth0,'placeholder': depth0};
   hashTypes = {'id': "STRING",'placeholder': "STRING"};
   options = {hash:{
@@ -219,7 +221,11 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
     'class': ("btn btn-primary")
   },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers.input),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n                </p>\n\n            </div>\n        </div>\n\n</div>\n\n");
+  data.buffer.push("\n                </p>\n\n            </div>\n        </div>\n\n    <button  ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "uploadProfilePic", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(">TEST</button>\n</div>\n\n");
   return buffer;
   
 });

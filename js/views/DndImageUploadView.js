@@ -3,12 +3,19 @@
 
   App.DndImageUploadView = Ember.View.extend({
     templateName: "dnd-image-upload",
-    value: null,
+    __debugValue: (function() {
+      var exceptionObj;
+
+      try {
+        console.log("File dropped: " + this.get('value').name);
+      } catch (_error) {
+        exceptionObj = _error;
+        console.log(exceptionObj);
+      }
+    }).observes('value'),
     didInsertElement: (function() {
       var dragAndDropView, dropZone, lambdaFunc;
 
-      console.log("DID INSERT VIEW!!!!!!!");
-      console.log(this);
       dropZone = this.$("#filedrop")[0];
       dragAndDropView = this;
       lambdaFunc = (function(evt) {
@@ -48,7 +55,7 @@
         };
       })(files[0]);
       reader.readAsDataURL(files[0]);
-      viewObj.set('value', files[0]);
+      Ember.set(viewObj, 'value', files[0]);
     }),
     dataURItoBlob: (function(dataURI) {
       var array, binary, i;
