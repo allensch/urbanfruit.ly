@@ -1,6 +1,7 @@
 Ember.TEMPLATES["dnd-image-upload"] = App.Templates.get("dnd-image-upload")
 App.DndImageUploadView = Ember.View.extend(
   templateName: "dnd-image-upload",
+  value:null,
   didInsertElement: ( ->
     console.log "DID INSERT VIEW!!!!!!!"
     console.log @
@@ -9,7 +10,10 @@ App.DndImageUploadView = Ember.View.extend(
     # Create a lambda function so we can pass along this view.
     dragAndDropView = @
     lambdaFunc = ((evt)->
-      dragAndDropView.handleFileSelect(evt, dragAndDropView)
+      # It's really strange, but highlighting has to be removed here.
+      dropTargetElement = $(@)
+      dropTargetElement.removeClass('highlight-div-drag-enter')
+      dragAndDropView.handleFileSelect(evt, dragAndDropView, dropTargetElement)
     )
 
     dropZone.addEventListener "dragover", @handleDragOver, false
@@ -37,12 +41,9 @@ App.DndImageUploadView = Ember.View.extend(
     return
   )
 
-  handleFileSelect: ((evt, viewObj) ->
+  handleFileSelect: ((evt, viewObj, dndTargetElement) ->
     evt.stopPropagation()
     evt.preventDefault()
-
-    # Remove background highlighting
-    $(@).removeClass('highlight-div-drag-enter')
 
     files = evt.dataTransfer.files # FileList object.
 
@@ -53,14 +54,14 @@ App.DndImageUploadView = Ember.View.extend(
     reader.onload = ((theFile) ->
       (e) ->
         # Render thumbnail.
-        fileDropTarget.attr "src", e.target.result
+        dndTargetElement.attr "src", e.target.result
         return
 
     )(files[0])
     reader.readAsDataURL files[0]
 
     ## Need to figure out how to pass the controller here.
-    viewObj.get('controller').send('fileSelected', files[0])
+    viewObj.set('value', files[0])
     return
   )
 

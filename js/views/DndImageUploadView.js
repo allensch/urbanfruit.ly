@@ -3,6 +3,7 @@
 
   App.DndImageUploadView = Ember.View.extend({
     templateName: "dnd-image-upload",
+    value: null,
     didInsertElement: (function() {
       var dragAndDropView, dropZone, lambdaFunc;
 
@@ -11,7 +12,11 @@
       dropZone = this.$("#filedrop")[0];
       dragAndDropView = this;
       lambdaFunc = (function(evt) {
-        return dragAndDropView.handleFileSelect(evt, dragAndDropView);
+        var dropTargetElement;
+
+        dropTargetElement = $(this);
+        dropTargetElement.removeClass('highlight-div-drag-enter');
+        return dragAndDropView.handleFileSelect(evt, dragAndDropView, dropTargetElement);
       });
       dropZone.addEventListener("dragover", this.handleDragOver, false);
       dropZone.addEventListener("drop", lambdaFunc, false);
@@ -29,22 +34,21 @@
     handleDragLeave: (function(evt) {
       $(this).removeClass('highlight-div-drag-enter');
     }),
-    handleFileSelect: (function(evt, viewObj) {
+    handleFileSelect: (function(evt, viewObj, dndTargetElement) {
       var fileDropTarget, files, reader;
 
       evt.stopPropagation();
       evt.preventDefault();
-      $(this).removeClass('highlight-div-drag-enter');
       files = evt.dataTransfer.files;
       reader = new FileReader();
       fileDropTarget = $(this);
       reader.onload = (function(theFile) {
         return function(e) {
-          fileDropTarget.attr("src", e.target.result);
+          dndTargetElement.attr("src", e.target.result);
         };
       })(files[0]);
       reader.readAsDataURL(files[0]);
-      viewObj.get('controller').send('fileSelected', files[0]);
+      viewObj.set('value', files[0]);
     }),
     dataURItoBlob: (function(dataURI) {
       var array, binary, i;
