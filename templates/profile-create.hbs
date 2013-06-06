@@ -2,34 +2,33 @@
 
 <div id="profile-div" class="container-fluid">
 
-        <div class="row">
-
-            <div class="span2 offset2">
-                <span>Profile Picture</span><br/>
-                {{view App.DndImageUploadView valueBinding=profilePic}}<br/>
-                {{input type="file"}}<br/>
-                <div id="file-upload-progress" class="progress">
-                    <div class="bar" style="width: 60%;"></div>
-                </div>
-            </div>
-
-
-
-            <!-- Right column -->
-            <div class="span6 offset2">
-
-                <p>
-                    <label for="profile-bio">About:</label>
-                    {{textarea id="profile-bio" placeholder="Write a short bio of yourself."}}
-                </p>
-
-                <p>
-                    {{input type="submit" class="btn btn-primary"}}
-                </p>
-
+    <div class="row">
+        <!-- left column -->
+        <div class="span2 offset2">
+            <span>Profile Picture</span><br/>
+            {{view App.DndImageUploadView valueBinding=profilePic}}<br/>
+            {{input type="file"}}<br/>
+            <div id="file-upload-progress" class="progress">
+                <div class="bar" style="width: 60%;"></div>
             </div>
         </div>
 
-    <button  {{action uploadProfilePic}}>TEST</button>
+
+
+        <!-- Right column -->
+        <div class="span6 offset2">
+
+            <p>
+                <label for="profile-bio">About:</label>
+                {{textarea id="profile-bio" placeholder="Write a short bio of yourself."}}
+            </p>
+
+            <p>
+                {{input type="submit" class="btn btn-primary"}}
+            </p>
+
+        </div>
+    </div>
+
 </div>
 

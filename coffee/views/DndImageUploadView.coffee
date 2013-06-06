@@ -72,14 +72,14 @@ App.DndImageUploadView = Ember.View.extend(
     )(files[0])
     reader.readAsDataURL files[0]
 
-    ## Need to figure out how to pass the controller here.
-    #viewObj.set('value', files[0])
+    # Set the value on the binding (as well as trigger any observers)
     Ember.set viewObj, 'value', files[0]
     return
   )
 
 
   dataURItoBlob: ((dataURI) ->
+    #Convert dropped file into a DataURI for quick display in the drop target box.
     binary = atob(dataURI.split(",")[1])
     array = []
     i = 0
