@@ -1,48 +1,29 @@
 
 
-<div class="container create-profile-form-container">
-    <form class="form-inline">
+<div id="profile-div" class="container-fluid">
 
-        <div class="row pagination-centered">
+        <div class="row">
 
-            <!-- Profile Pic preview/upload -->
-            <div class="span4">
-                <p class="span2 offset1">
-                    <label class="visible-desktop">Drag and drop Image to upload a profile pic.</label>
-                </p>
-
-                <p class="span4">
-                    <img class="img-polaroid" src="img/profile_img_placeholder.png"/>
-                </p>
-
-                <p class="span2 offset1">
-                    <input type="file"/>
-                </p>
+            <div class="span2 offset2">
+                <span>Profile Picture</span><br/>
+                {{view App.DndImageUploadView}}<br/>
+                {{input type="file"}}
             </div>
 
             <!-- Right column -->
-            <div class="span6">
+            <div class="span6 offset2">
 
                 <p>
-                    <label>Name:</label>{{input type="text"}}
-                </p>
-                <p>
-                    <label>Email:</label>{{input type="email"}}
-                </p>
-                <p>
-                    {{textarea placeholder="Write a short bio of yourself."}}
+                    <label for="profile-bio">About:</label>
+                    {{textarea id="profile-bio" placeholder="Write a short bio of yourself."}}
                 </p>
 
                 <p>
                     {{input type="submit" class="btn btn-primary"}}
                 </p>
 
-
             </div>
         </div>
 
-
-
-    </form>
 </div>
 
