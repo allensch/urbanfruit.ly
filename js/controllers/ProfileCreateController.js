@@ -29,6 +29,7 @@
           console.log(data);
           console.log("Setting data file:" + data.name);
           profileController.set('_profileFilename', data.name);
+          profileController.set('profileSrc', data.url);
         }),
         error: (function(data) {
           var obj;
@@ -66,7 +67,7 @@
       handlers = {
         success: function(result) {
           console.log("success transitioning to /profile");
-          controller.transitionTo('profile');
+          controller.transitionToRoute('profile');
         },
         error: function(result, error) {
           console.log(error);

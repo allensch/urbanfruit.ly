@@ -4,11 +4,16 @@
   App.ProfileCreateView = Ember.View.extend({
     templateName: "profileCreate",
     didInsertElement: function() {
-      var profileArea;
+      var profileArea, view;
 
       profileArea = this.$("#profile-div")[0];
       profileArea.addEventListener("dragover", this.preventDropTarget, false);
       profileArea.addEventListener("drop", this.preventDropTarget, false);
+      view = this;
+      this.$("#file-select").change(function(evt) {
+        console.log("file selection event");
+        return view.handleFileSelected(view, this.files[0]);
+      });
     },
     updateProgressBar: (function() {
       var e;
@@ -29,6 +34,11 @@
     preventDropTarget: (function(evt) {
       evt.stopPropagation();
       evt.preventDefault();
+    }),
+    handleFileSelected: (function(view, file) {
+      console.log("handling file selection event.");
+      console.log(file);
+      view.get('controller').set("profilePic", file);
     })
   });
 

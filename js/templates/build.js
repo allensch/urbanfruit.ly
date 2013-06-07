@@ -199,14 +199,7 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
     'valueBinding': ("profilePic"),
     'srcBinding': ("profileSrc")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("<br/>\n            ");
-  hashContexts = {'type': depth0};
-  hashTypes = {'type': "STRING"};
-  options = {hash:{
-    'type': ("file")
-  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.input),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("<br/>\n\n            <div id=\"file-upload-progress\" class=\"progress hide\">\n                <div class=\"bar\" style=\"width: 0%;\"></div>\n            </div>\n        </div>\n\n\n\n        <!-- Right column -->\n        <div class=\"span6 offset2\">\n\n            <p>\n                <label for=\"profile-bio\">About:</label>\n                ");
+  data.buffer.push("<br/>\n            <input id=\"file-select\" type=\"file\" multiple=\"false\" /><br/>\n\n            <div id=\"file-upload-progress\" class=\"progress hide\">\n                <div class=\"bar\" style=\"width: 0%;\"></div>\n            </div>\n        </div>\n\n\n\n        <!-- Right column -->\n        <div class=\"span6 offset2\">\n\n            <p>\n                <label for=\"profile-bio\">About:</label>\n                ");
   hashContexts = {'id': depth0,'placeholder': depth0,'value': depth0};
   hashTypes = {'id': "STRING",'placeholder': "STRING",'value': "ID"};
   options = {hash:{

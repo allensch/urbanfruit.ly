@@ -7,7 +7,7 @@
         <div class="span2 offset2">
             <span>Profile Picture</span><br/>
             {{view App.DndImageUploadView valueBinding=profilePic srcBinding=profileSrc}}<br/>
-            {{input type="file"}}<br/>
+            <input id="file-select" type="file" multiple="false" /><br/>
 
             <div id="file-upload-progress" class="progress hide">
                 <div class="bar" style="width: 0%;"></div>

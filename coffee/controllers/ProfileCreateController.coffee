@@ -43,7 +43,7 @@ App.ProfileCreateController = Ember.Controller.extend(
 
         console.log "Setting data file:" + data.name
         profileController.set('_profileFilename', data.name)
-
+        profileController.set('profileSrc', data.url)
         return
       )
       error: ((data) ->
@@ -90,7 +90,7 @@ App.ProfileCreateController = Ember.Controller.extend(
     handlers =
       success: (result) ->
         console.log "success transitioning to /profile"
-        controller.transitionTo('profile')
+        controller.transitionToRoute('profile')
         return
       error: (result, error) ->
         console.log error
@@ -101,6 +101,7 @@ App.ProfileCreateController = Ember.Controller.extend(
     console.log "profile created"
     return
   )
+
 
 )
 
