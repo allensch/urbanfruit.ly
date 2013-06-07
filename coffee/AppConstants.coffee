@@ -7,3 +7,6 @@ App.Events.PRODUCTS_FILTERED = 'products-filtered'
 #STORE KEYS
 App.Store.MAP_ZOOM = 'map_zoom'
 App.Store.LAST_LOCATION = 'last_location'
+
+#URLS
+App._SETTINGS.PARSE_API_BASE_URL = 'api.parse.com'

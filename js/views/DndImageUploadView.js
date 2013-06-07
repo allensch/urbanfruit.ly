@@ -13,9 +13,13 @@
         console.log(exceptionObj);
       }
     }).observes('value'),
+    __updateSrc: (function() {
+      return this.$("img").attr('src', this.get('src'));
+    }).observes('src'),
     didInsertElement: (function() {
       var dragAndDropView, dropZone, lambdaFunc;
 
+      this.$("img").attr('src', this.get('src'));
       dropZone = this.$("#filedrop")[0];
       dragAndDropView = this;
       lambdaFunc = (function(evt) {

@@ -64,4 +64,6 @@
 
   App.Controllers = Ember.Namespace.create();
 
+  App._SETTINGS = Ember.Namespace.create();
+
 }).call(this);

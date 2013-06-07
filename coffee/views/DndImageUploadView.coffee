@@ -3,6 +3,7 @@ App.DndImageUploadView = Ember.View.extend(
 
   templateName: "dnd-image-upload",
 
+  #value: null # this is bindinded to selected file.
 
   __debugValue: ( ->
     # Oberver to check what 'view' binding is being set to as it's being set.
@@ -13,7 +14,15 @@ App.DndImageUploadView = Ember.View.extend(
     return
   ).observes('value')
 
+  __updateSrc: ( ->
+    @$("img").attr('src', @get('src'))
+  ).observes('src')
+
   didInsertElement: ( ->
+    #Set img to SRC attr.
+    @$("img").attr('src', @get('src'))
+
+
     dropZone = @$("#filedrop")[0]
 
     # Create a lambda function so we can pass along this view.

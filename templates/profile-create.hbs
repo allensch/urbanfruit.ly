@@ -6,10 +6,11 @@
         <!-- left column -->
         <div class="span2 offset2">
             <span>Profile Picture</span><br/>
-            {{view App.DndImageUploadView valueBinding=profilePic}}<br/>
+            {{view App.DndImageUploadView valueBinding=profilePic srcBinding=profileSrc}}<br/>
             {{input type="file"}}<br/>
-            <div id="file-upload-progress" class="progress">
-                <div class="bar" style="width: 60%;"></div>
+
+            <div id="file-upload-progress" class="progress hide">
+                <div class="bar" style="width: 0%;"></div>
             </div>
         </div>
 
@@ -20,13 +21,13 @@
 
             <p>
                 <label for="profile-bio">About:</label>
-                {{textarea id="profile-bio" placeholder="Write a short bio of yourself."}}
+                {{textarea id="profile-bio" placeholder="Write a short bio of yourself." value=bio}}
             </p>
+
 
             <p>
-                {{input type="submit" class="btn btn-primary"}}
+                <button class="btn btn-primary" {{action createProfile}}>Create</button>
             </p>
-
         </div>
     </div>
 

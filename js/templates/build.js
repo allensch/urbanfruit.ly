@@ -7,7 +7,7 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   
 
 
-  data.buffer.push("<!-- Profile Pic preview/upload -->\n<div>\n    <img id=\"filedrop\" class=\"img-polaroid\" src=\"img/profile_img_placeholder.png\"/><br/>\n    <span class=\"visible-desktop\">Drag and drop Image to upload a profile pic.</span>\n</div>");
+  data.buffer.push("<!-- Profile Pic preview/upload -->\n<div>\n    <img id=\"filedrop\" class=\"img-polaroid\"/><br/>\n    <span class=\"visible-desktop\">Drag and drop Image to upload a profile pic.</span>\n</div>");
   
 });
 
@@ -193,10 +193,11 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
 
 
   data.buffer.push("\n\n<div id=\"profile-div\" class=\"container-fluid\">\n\n    <div class=\"row\">\n        <!-- left column -->\n        <div class=\"span2 offset2\">\n            <span>Profile Picture</span><br/>\n            ");
-  hashContexts = {'valueBinding': depth0};
-  hashTypes = {'valueBinding': "ID"};
+  hashContexts = {'valueBinding': depth0,'srcBinding': depth0};
+  hashTypes = {'valueBinding': "ID",'srcBinding': "ID"};
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.DndImageUploadView", {hash:{
-    'valueBinding': ("profilePic")
+    'valueBinding': ("profilePic"),
+    'srcBinding': ("profileSrc")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("<br/>\n            ");
   hashContexts = {'type': depth0};
@@ -205,23 +206,20 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
     'type': ("file")
   },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers.input),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("<br/>\n            <div id=\"file-upload-progress\" class=\"progress\">\n                <div class=\"bar\" style=\"width: 60%;\"></div>\n            </div>\n        </div>\n\n\n\n        <!-- Right column -->\n        <div class=\"span6 offset2\">\n\n            <p>\n                <label for=\"profile-bio\">About:</label>\n                ");
-  hashContexts = {'id': depth0,'placeholder': depth0};
-  hashTypes = {'id': "STRING",'placeholder': "STRING"};
+  data.buffer.push("<br/>\n\n            <div id=\"file-upload-progress\" class=\"progress hide\">\n                <div class=\"bar\" style=\"width: 0%;\"></div>\n            </div>\n        </div>\n\n\n\n        <!-- Right column -->\n        <div class=\"span6 offset2\">\n\n            <p>\n                <label for=\"profile-bio\">About:</label>\n                ");
+  hashContexts = {'id': depth0,'placeholder': depth0,'value': depth0};
+  hashTypes = {'id': "STRING",'placeholder': "STRING",'value': "ID"};
   options = {hash:{
     'id': ("profile-bio"),
-    'placeholder': ("Write a short bio of yourself.")
+    'placeholder': ("Write a short bio of yourself."),
+    'value': ("bio")
   },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers.textarea),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n            </p>\n\n            <p>\n                ");
-  hashContexts = {'type': depth0,'class': depth0};
-  hashTypes = {'type': "STRING",'class': "STRING"};
-  options = {hash:{
-    'type': ("submit"),
-    'class': ("btn btn-primary")
-  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.input),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n            </p>\n\n        </div>\n    </div>\n\n</div>\n\n");
+  data.buffer.push("\n            </p>\n\n\n            <p>\n                <button class=\"btn btn-primary\" ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "createProfile", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(">Create</button>\n            </p>\n        </div>\n    </div>\n\n</div>\n\n");
   return buffer;
   
 });

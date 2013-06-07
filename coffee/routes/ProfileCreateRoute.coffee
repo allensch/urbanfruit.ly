@@ -1,8 +1,9 @@
 App.ProfileCreateRoute = Ember.Route.extend(
-  redirect: ->
+  redirect: (->
     console.log "calling redirect"
     if !this.controllerFor('auth').get('user')
       @transitionTo 'login'
-
     return
+  )
+
 )

@@ -11,4 +11,6 @@
 
   App.Store.LAST_LOCATION = 'last_location';
 
+  App._SETTINGS.PARSE_API_BASE_URL = 'api.parse.com';
+
 }).call(this);
