@@ -7,13 +7,15 @@ find and trade fruits right in your area
 running http://urbanfruitly.herokuapp.com/
 
 # Source
+
 Web: https://github.com/allensch/urbanfruit.ly
+
 iOS: https://github.com/cfflymolo/Urban-Fruitly
 
 
 # Technology Stack
 
-* emberjs (rc2)
+* emberjs (rc5)
 * coffee
 * parse.com
 
