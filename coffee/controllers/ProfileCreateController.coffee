@@ -7,7 +7,6 @@ App.ProfileCreateController = Ember.Controller.extend(
   profilePic: null
 
   profileSrc:'img/profile_img_placeholder.png'
-  fileData: null
 
   # Control values we see in progress bar.
   percentLoaded: -1
@@ -41,7 +40,6 @@ App.ProfileCreateController = Ember.Controller.extend(
 
         console.log "Successful file post."
         console.log data
-        profileController.set('fileData', data)
 
         console.log "Setting data file:" + data.name
         profileController.set('_profileFilename', data.name)
@@ -50,7 +48,7 @@ App.ProfileCreateController = Ember.Controller.extend(
       )
       error: ((data) ->
         obj = jQuery.parseJSON(data)
-        alert obj.error
+        console.log obj.error
         return
       )
       progress: ((e) ->
@@ -78,18 +76,27 @@ App.ProfileCreateController = Ember.Controller.extend(
     profile.set('owner', Parse.User.current())
     profile.set('about', @get('bio'))
 
-    profile.save()
+    controller = @
 
     if @get('_profileFilename')
-      fileObj =
-        name: @get('_profileFilename')
-        __type: 'File'
+      console.log "setting profile pic"
 
-      # TODO: there appears to be an issue with associating pictures using their API
-      profile.set("picture", fileObj)
+      # This file object is not yet publically documented.  May break with next release of Parse API
+      file = @get('profilePic')
+      picObj = new Parse.File(file.name, file, file.type)
 
+      profile.set('picture', picObj)
 
-    profile.save()
+    handlers =
+      success: (result) ->
+        console.log "success transitioning to /profile"
+        controller.transitionTo('profile')
+        return
+      error: (result, error) ->
+        console.log error
+        return
+
+    profile.save(null, handlers)
 
     console.log "profile created"
     return

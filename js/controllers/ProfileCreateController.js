@@ -3,7 +3,6 @@
     needs: "auth",
     profilePic: null,
     profileSrc: 'img/profile_img_placeholder.png',
-    fileData: null,
     percentLoaded: -1,
     _profileFilename: null,
     profilePicSelected: (function() {
@@ -28,7 +27,6 @@
         success: (function(data) {
           console.log("Successful file post.");
           console.log(data);
-          profileController.set('fileData', data);
           console.log("Setting data file:" + data.name);
           profileController.set('_profileFilename', data.name);
         }),
@@ -36,7 +34,7 @@
           var obj;
 
           obj = jQuery.parseJSON(data);
-          alert(obj.error);
+          console.log(obj.error);
         }),
         progress: (function(e) {
           var pct;
@@ -51,22 +49,30 @@
       });
     }).observes('profilePic'),
     createProfile: (function() {
-      var Profile, fileObj, profile;
+      var Profile, controller, file, handlers, picObj, profile;
 
       console.log("Creating profile action");
       Profile = Parse.Object.extend("Profile");
       profile = new Profile();
       profile.set('owner', Parse.User.current());
       profile.set('about', this.get('bio'));
-      profile.save();
+      controller = this;
       if (this.get('_profileFilename')) {
-        fileObj = {
-          name: this.get('_profileFilename'),
-          __type: 'File'
-        };
-        profile.set("picture", fileObj);
+        console.log("setting profile pic");
+        file = this.get('profilePic');
+        picObj = new Parse.File(file.name, file, file.type);
+        profile.set('picture', picObj);
       }
-      profile.save();
+      handlers = {
+        success: function(result) {
+          console.log("success transitioning to /profile");
+          controller.transitionTo('profile');
+        },
+        error: function(result, error) {
+          console.log(error);
+        }
+      };
+      profile.save(null, handlers);
       console.log("profile created");
     })
   });

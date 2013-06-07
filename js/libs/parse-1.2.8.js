@@ -7244,7 +7244,7 @@
         matches: function(key, regex, modifiers) {
             this._addCondition(key, "$regex", regex);
             if (!modifiers) { modifiers = ""; }
-            // Javascript regex options support mig as inline options but store them 
+            // Javascript regex options support mig as inline options but store them
             // as properties of the object. We support mi & should migrate them to
             // modifiers
             if (regex.ignoreCase) { modifiers += 'i'; }
