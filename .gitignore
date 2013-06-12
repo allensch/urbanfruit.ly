@@ -1,3 +1,4 @@
-.idea/watcherTasks.xml
-.idea/workspace.xml
+.idea/**
 node_modules/**
+coffee/AppSecrets.coffee
+js/AppSecrets.js
