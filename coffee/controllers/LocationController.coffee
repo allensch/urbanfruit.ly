@@ -33,6 +33,7 @@ App.Controllers.LocationController = Ember.ObjectController.extend(
 
   onGeoLocation: (data) ->
     @set 'location', data
+    console.log 'onGeoLocation', data
     store.set App.Store.LAST_LOCATION, data
     if @geocoder
       @reverseLocation()

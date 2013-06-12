@@ -33,6 +33,7 @@
     },
     onGeoLocation: function(data) {
       this.set('location', data);
+      console.log('onGeoLocation', data);
       store.set(App.Store.LAST_LOCATION, data);
       if (this.geocoder) {
         this.reverseLocation();
