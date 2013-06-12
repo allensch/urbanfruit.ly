@@ -147,23 +147,8 @@ function program3(depth0,data) {
 
 function program5(depth0,data) {
   
-  var buffer = '', stack1, stack2, hashContexts, hashTypes, options;
-  data.buffer.push("\n                        ");
-  hashContexts = {'tag': depth0,'class': depth0};
-  hashTypes = {'tag': "STRING",'class': "STRING"};
-  options = {hash:{
-    'tag': ("button"),
-    'class': ("btn btn-danger")
-  },inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "login", options) : helperMissing.call(depth0, "linkTo", "login", options));
-  if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push("\n                    ");
-  return buffer;
-  }
-function program6(depth0,data) {
   
-  
-  data.buffer.push("Login");
+  data.buffer.push("\n                        <a class=\"dropdown-toggle\" data-toggle=\"dropdown\">Login <b class=\"caret\"></b></a>\n                        <ul class=\"dropdown-menu\">\n                            <li>\n\n                            </li>\n                        </ul>\n                    ");
   }
 
   data.buffer.push("<!--/**\n    Navbar view handlebars template file.\n */-->\n\n<div id=\"topNavBar\" class=\"navbar\">\n    <div class=\"navbar-inner no-border\">\n        <div class=\"navbar-form\">\n            ");
@@ -172,16 +157,12 @@ function program6(depth0,data) {
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "index", options) : helperMissing.call(depth0, "linkTo", "index", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push("\n            <ul class=\"nav pull-right\">\n                <li class=\"divider-vertical\"></li>\n                <li>\n                    ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers.log.call(depth0, "isLoggedIn", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n                    ");
+  data.buffer.push("\n            <ul class=\"nav pull-right\">\n                <li class=\"divider-vertical\"></li>\n                <li class=\"dropdown\">\n                    ");
   hashTypes = {};
   hashContexts = {};
   stack2 = helpers['if'].call(depth0, "isLoggedIn", {hash:{},inverse:self.program(5, program5, data),fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push("\n\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>");
+  data.buffer.push("\n                </li>\n                <li class=\"divider-vertical\"></li>\n                <li>\n                    <button class=\"btn btn-facebook\" onclick=\"window.open('https://www.facebook.com/Urbanfruitly', '_blank')\"><i class=\"icon-facebook\"></i> Like us </button>\n                    <button class=\"btn btn-twitter\" onclick=\"window.open('https://twitter.com/urbanfruitly', '_blank')\"><i class=\"icon-twitter\"></i> Follow us </button>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>");
   return buffer;
   
 });

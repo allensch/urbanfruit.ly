@@ -13,14 +13,22 @@
             {{/linkTo}}
             <ul class="nav pull-right">
                 <li class="divider-vertical"></li>
-                <li>
-                    {{log isLoggedIn}}
+                <li class="dropdown">
                     {{#if isLoggedIn}}
                         <button {{action logout}} class="btn">Logout</button>
                     {{else}}
-                        {{#linkTo login tag="button" class="btn btn-danger"}}Login{{/linkTo}}
-                    {{/if}}
+                        <a class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
 
+                            </li>
+                        </ul>
+                    {{/if}}
+                </li>
+                <li class="divider-vertical"></li>
+                <li>
+                    <button class="btn btn-facebook" onclick="window.open('https://www.facebook.com/Urbanfruitly', '_blank')"><i class="icon-facebook"></i> Like us </button>
+                    <button class="btn btn-twitter" onclick="window.open('https://twitter.com/urbanfruitly', '_blank')"><i class="icon-twitter"></i> Follow us </button>
                 </li>
             </ul>
         </div>
