@@ -32,6 +32,53 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   
 });
 
+this["App"]["Templates"]["login-form"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [3,'>= 1.0.0-rc.4'];
+helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  var buffer = '', stack1, hashTypes, hashContexts, escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = '', hashContexts, hashTypes;
+  data.buffer.push("\n\n        <button type=\"submit\" class=\"btn btn-info\">Submit</button>\n        <button class=\"btn btn-link\" ");
+  hashContexts = {'target': depth0};
+  hashTypes = {'target': "STRING"};
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "clickCancelForgotPassword", {hash:{
+    'target': ("view")
+  },contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(">Cancel</button>\n\n        ");
+  return buffer;
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = '', hashContexts, hashTypes;
+  data.buffer.push("\n\n        <label for=\"inputPassword\">Password</label>\n        <input id=\"inputPassword\" class=\"input-block-level\" type=\"password\">\n\n        <label class=\"checkbox\">\n            <input type=\"checkbox\">\n            <span>Remember me</span>\n        </label>\n        <button type=\"submit\" class=\"btn\">Sign in</button>\n\n        <button class=\"btn btn-link\" ");
+  hashContexts = {'target': depth0};
+  hashTypes = {'target': "STRING"};
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "clickForgotPassword", {hash:{
+    'target': ("view")
+  },contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(">Forgot password?</button>\n        <button class=\"btn btn-link\" ");
+  hashContexts = {'target': depth0};
+  hashTypes = {'target': "STRING"};
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "clickCreateAccount", {hash:{
+    'target': ("view")
+  },contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(">Create account</button>\n\n\n        <button class=\"btn btn-facebook btn-block\"><i class=\"icon-facebook-sign\"></i> Sign in with Facebook</button>\n        <button class=\"btn btn-google-plus btn-block\"><i class=\"icon-google-plus-sign\"></i> Sign in with Google+</button>\n\n        ");
+  return buffer;
+  }
+
+  data.buffer.push("<form class=\"LoginForm\">\n    <fieldset>\n\n        <label for=\"inputEmail\">Email address</label>\n        <input id=\"inputEmail\" class=\"input-block-level\" type=\"text\">\n\n        ");
+  hashTypes = {};
+  hashContexts = {};
+  stack1 = helpers['if'].call(depth0, "view.forgotPassword", {hash:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n\n    </fieldset>\n</form>");
+  return buffer;
+  
+});
+
 this["App"]["Templates"]["login"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [3,'>= 1.0.0-rc.4'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
@@ -147,11 +194,16 @@ function program3(depth0,data) {
 
 function program5(depth0,data) {
   
-  
-  data.buffer.push("\n                        <a class=\"dropdown-toggle\" data-toggle=\"dropdown\">Login <b class=\"caret\"></b></a>\n                        <ul class=\"dropdown-menu\">\n                            <li>\n\n                            </li>\n                        </ul>\n                    ");
+  var buffer = '', hashTypes, hashContexts;
+  data.buffer.push("\n                        <a class=\"dropdown-toggle\" data-toggle=\"dropdown\">Sign in <b class=\"caret\"></b></a>\n                        <ul class=\"dropdown-menu\">\n                            <li>\n                                ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.Views.LoginFormView", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("\n                            </li>\n                        </ul>\n                    ");
+  return buffer;
   }
 
-  data.buffer.push("<!--/**\n    Navbar view handlebars template file.\n */-->\n\n<div id=\"topNavBar\" class=\"navbar\">\n    <div class=\"navbar-inner no-border\">\n        <div class=\"navbar-form\">\n            ");
+  data.buffer.push("<div id=\"topNavBar\" class=\"navbar\">\n    <div class=\"navbar-inner no-border\">\n        <div class=\"navbar-form\">\n            ");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};

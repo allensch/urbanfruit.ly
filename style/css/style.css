@@ -9,3 +9,6 @@ input[type="text"],input[type="password"]{padding:14px 6px;}
 .CustomDivMarker{border:none;position:absolute;padding-left:0px;cursor:pointer;width:10px;height:10px;border-radius:5px;background-color:#000;}
 #profile-bio{height:40%;}
 .highlight-div-drag-enter{border:2px solid dodgerblue;box-shadow:2px;}
+.LoginForm{width:270px;margin:0px;padding:20px;}.LoginForm label{margin:0px;}
+.LoginForm input{margin-top:0px;margin-bottom:10px;}
+.LoginForm .checkbox{float:left;width:181px;}
