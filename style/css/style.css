@@ -1,6 +1,5 @@
 body,html{min-height:100%;height:100%;width:100%;overflow:hidden;}
 #notifications-overlay-container{top:40px;width:100%;height:50px;position:fixed;z-index:2;}
-input[type="text"],input[type="password"]{padding:14px 6px;}
 .no-border{webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
 .FillHeight{min-height:100%;height:100%;width:100%;}
 .MainView{width:100%;position:relative;}.MainView .span3{width:25%;}
