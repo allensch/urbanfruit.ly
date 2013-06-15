@@ -18,7 +18,7 @@
             <input type="checkbox">
             <span>Remember me</span>
         </label>
-        <button type="submit" class="btn">Sign in</button>
+        <button type="submit" class="btn" {{ action "clickSignIn" target="view" }}>Sign in</button>
 
         <button class="btn btn-link" {{ action "clickForgotPassword" target="view" }}>Forgot password?</button>
         <button class="btn btn-link" {{ action "clickCreateAccount" target="view" }}>Create account</button>

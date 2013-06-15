@@ -9,7 +9,7 @@
             {{/linkTo}}
             <ul class="nav pull-right">
                 <li class="divider-vertical"></li>
-                <li class="dropdown">
+                <li id="loginDropDownItem" class="dropdown">
                     {{#if isLoggedIn}}
                         <button {{action logout}} class="btn">Logout</button>
                     {{else}}
